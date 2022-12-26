@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<body>
+    <link rel="stylesheet" href="style.css"> <!-- Importing the style.css -->
+    
+    <header> <!-- The head part of the document -->
+        <p>New York RP</p>
+    </header>
+    
+    <p id="Homepageintro" class="homepageintroduktion">
+        However if you are looking for a roleplaying-server right now, then you dont need to look further
+        choose your roleplaying community wisely, 
+        choose a roleplaying-server with serious, experienced and good developers, 
+        choose a roleplaying-server with an excellent staff-team that together does an amazing job, 
+        choose a roleplaying server with a friendly and fun community, choose New York RP.</span>
+        <br><br>
+        New York RP is the biggest and best roleplaying-server and or community for many reasons
+        for example some servers are more hardcore than others 
+        regarding the amount of immersion they expect you to provide, however here at New York RP we only
+        require you to follow simple and basic rules so the RP will go along more smoothly
+        and so that we dont have to think about rules all the time which could potentially ruin the RP 
+        <br><br>
+        These are the following rules we require you to know and abide by: 
+        do not break character or engage in senseless violence, do not COPBAIT which means 
+        that you try on purpose to get the police after you for fun, do not FARM which means 
+        that you dont join the server for the only purpose of playing GTA which is earning money,
+        do not backseat-moderate which means that you cannot go around and threaten players 
+        with all sorts of punishments because you feel like you werent treated fairly, Do not
+        break FEARRP which means that you have to fear for your life at all times for example 
+        if somebody is threatening you with a pistol you gotta obey whatever request the gunman has.
+    </p>
+
+    <div> <!-- The navigationbar -->
+        <div class="navbar">
+            
+            <center><img src="./src/newyorkskyline.png" style="height: 25%; width: 75%;"></center> <!-- Your logo change the path in the src="" -->
+            
+            <div class="buttoncontainer">
+                <a href="index.html"><button class="btn">
+                    <p>Homepage</p>
+                </button></a>                
+            </div>
+
+            <div class="buttoncontainer" style="margin-top: 30%;"> 
+                <script>
+                    function showaboutus(){
+                        document.getElementById('credits').style.visibility = "hidden";
+                        document.getElementById('Homepageintro').style.visibility = "hidden";
+                        var currentstateofaboutusbox0 = document.getElementById('aboutus').style.visibility = "visible";
+                        console.log("Element named aboutus is " + currentstateofaboutusbox0);
+                        }
+                </script>
+                
+                <button class="btn" onclick="showaboutus()">
+                    <p>
+                        About Us
+                    </p>
+                </button>  
+            </div>
+            
+            <div class="buttoncontainer" style="margin-top: 60%;"> <!-- Add 30% to the margin-top everytime you add a button -->
+                <script>
+                    function showcredits(){
+                        document.getElementById('aboutus').style.visibility = "hidden";
+                        document.getElementById('Homepageintro').style.visibility = "hidden";
+                        var currentstateofcreditsbox0 = document.getElementById('credits').style.visibility = "visible";
+                        console.log("Element named credits is " + currentstateofcreditsbox0);
+                        }
+                </script>
+                <button class="btn" onclick="showcredits()">
+                    <p>Credits</p>
+                </button>  
+            </div>
+            
+            <div class="buttoncontainer" style="margin-top: 90%;">
+                <a href="https://discord.gg/"><button class="btn">
+                    <p>Discord</p>
+                </button></a>
+            </div>
+
+            <p class="copyrightfooter">
+                <span style="display: inline-block;">©Copyright 2022-2023</span>
+                <span style="display: inline-block;">All rights served to New York RP</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="aboutus" class="informationbox">
+        <script>
+            function exitaboutus() {
+                document.getElementById('Homepageintro').style.visibility = "visible";
+                var currentstateofaboutusbox = document.getElementById('aboutus').style.visibility = "hidden";
+                console.log("Element named about us is " + currentstateofaboutusbox);
+            }
+        </script>
+        <div id="exitbtn">
+            <button class="btn" value="exitbutton" onclick="exitaboutus()"><img src="src/exit.png" style="height: 110%; width: 100%;"></button>
+        </div> 
+        <p class="informationboxtext">
+            New York RP is a serious RP server, made off of the actual new york city
+            we have installed a giant YMAP so that our players can actually walk, drive
+            and in general do RP around for example "times square" or wherever you want to.
+            Here at New York RP we focus on top tier roleplaying which is why we have such a 
+            big staff-team and such dedicated owners.
+        </p>
+    </div>
+
+    <div id="credits" class="informationbox">
+        <script>
+            function exitcredits() {
+                document.getElementById('Homepageintro').style.visibility = "visible";
+                var currentstateofcreditsbox = document.getElementById('credits').style.visibility = "hidden";
+                console.log("Element named credits is " + currentstateofcreditsbox);
+            }
+        </script>
+        <div id="exitbtn">
+            <button class="btn" value="exitbutton" onclick="exitcredits()"><img src="src/exit.png" style="height: 110%; width: 100%;"></button>
+        </div>
+        <p class="informationboxtext">
+            shoutout to these people for making New York RP possible
+            <br><br><br>
+            Owner: XXXX
+            <br><br> <!-- Use 2x <br> to make a new line -->
+            CO-Owner: XXXX
+            <br><br>
+            Administrators: XXXX
+            <br><br>
+            Moderators: XXXX
+            <br><br>
+            Trial Staff: XXXX 
+        </p>
+    </div>
+</body>
+</html>
