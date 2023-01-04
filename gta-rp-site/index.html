@@ -2,7 +2,7 @@
 <body>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css"> <!-- Importing the style.css -->
-
+    <img src="./src/skyscraper_nyc.jpeg" class="backgroundpic">
     <div id="homepage">
         <header> <!-- The head part of the document -->
             <p>New York RP</p>
@@ -32,9 +32,9 @@
     </div>
 
     <div class="clock">
-        <div style="position: relative; height: 100%; width: 100%; font-family: 'mainfont'; font-size: 150%;">
-            <a id="todaysday" style="position: relative; left: 25%; top: 30%;">xxx</a>
-            <a id="todaysdate" style="position: relative; left: 50%; top: 30%;">xxx</a>
+        <div style="position: absolute; height: 100%; width: 100%; font-family: 'mainfont'; font-size: 150%;">
+            <a id="todaysday" style="position: absolute; left: 30%; top: 30%;">xxx</a>
+            <a id="todaystime" style="position: absolute; left: 72.5%; top: 30%;">xxx</a>
             <script>
                 const date = new Date();
                 const day = [
@@ -52,8 +52,8 @@
                 }else{
                     minutes = date.getMinutes();
                 }
-                document.getElementById('todaysday').innerHTML = "Day: " + day[date.getDay()];
-                document.getElementById('todaysdate').innerHTML = "Time: " + date.getHours() + ":" + minutes;
+                document.getElementById('todaysday').innerHTML = "Day: " + day[date.getDay()-1];
+                document.getElementById('todaystime').innerHTML = "Time: " + date.getHours() + ":" + minutes;                      
             </script> 
         </div>
     </div>
@@ -74,6 +74,7 @@
                     <p id="test">About us</p>
                     <script>
                         function show1(){
+                            document.getElementById('todaystime').innerHTML = "Time: " + date.getHours() + ":" + minutes;                      
                             const text = "New York RP is a serious RP server, made off of the actual new york city we have installed a giant YMAP so that our players can actually walk, drive and in general do RP around for example 'times square' or wherever you want to. Here at New York RP we focus on top tier roleplaying which is why we have such a big staff-team and such dedicated owners.";
                             document.getElementById('homepage').style.visibility = "hidden";
                             document.getElementById('popupbox').style.visibility = "visible";
@@ -88,6 +89,7 @@
                     <p>Credits</p>
                     <script>
                         function show2(){
+                            document.getElementById('todaystime').innerHTML = "Time: " + date.getHours() + ":" + minutes;                      
                             const text = "These persons have contributed to this server"
                             + "<br>" + "Owner: "
                             + "<br>" + "CO-Owner: "
@@ -108,11 +110,12 @@
                     <p>Discord</p>
                 </button></a>
             </div>
-
-            <p class="copyrightfooter">
-                <span style="display: inline-block;">©Copyright 2022-2023</span>
-                <span style="display: inline-block;">All rights served to New York RP</span>
-            </p>
+            <div>
+                <p class="copyrightfooter">
+                    <span style="display: inline-block;">©Copyright 2022-2023</span>
+                    <span style="display: inline-block;">All rights served to New York RP</span>
+                </p>
+            </div>
         </div>
     </div>
 
